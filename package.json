@@ -1,0 +1,21 @@
+{
+  "name": "mhs-dream-center",
+  "version": "1.0.0",
+  "description": "Static Firebase hosting for Mason High School Dream Center website",
+  "scripts": {
+    "serve": "firebase serve",
+    "deploy": "firebase deploy",
+    "build": "echo 'Static site - no build needed'"
+  },
+  "keywords": [
+    "firebase",
+    "static-site",
+    "mason-high-school",
+    "dream-center"
+  ],
+  "author": "DaEpickid540",
+  "license": "MIT",
+  "devDependencies": {
+    "firebase-tools": "^latest"
+  }
+}

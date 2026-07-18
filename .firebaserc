@@ -1,5 +1,14 @@
 {
   "projects": {
-    "default": "dream-center-mhs"
+    "default": "school-suite-652d8"
+  },
+  "targets": {
+    "school-suite-652d8": {
+      "hosting": {
+        "main": [
+          "school-suite-652d8"
+        ]
+      }
+    }
   }
 }

@@ -39,10 +39,14 @@ html {
 
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.6;
+  line-height: 1.7;
   color: var(--text-primary);
   background-color: var(--bg-primary);
   transition: background-color 0.3s, color 0.3s;
+}
+
+p {
+  line-height: 1.7;
 }
 
 /* Header & Navigation */
@@ -133,7 +137,7 @@ nav a:hover::after {
 
 /* Container */
 .container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
@@ -142,7 +146,7 @@ nav a:hover::after {
 .hero {
   background: var(--mason-green);
   color: white;
-  padding: 6rem 2rem;
+  padding: 5rem 2rem 4.5rem;
   text-align: center;
   margin-bottom: 0;
   position: relative;
@@ -221,13 +225,13 @@ nav a:hover::after {
 
 /* Content Sections */
 section {
-  padding: 4rem 0;
+  padding: 5rem 0;
 }
 
 section h2 {
   font-size: 2.2rem;
   color: var(--text-primary);
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   position: relative;
   font-weight: 700;
   letter-spacing: -0.5px;
@@ -236,7 +240,7 @@ section h2 {
 section h2::after {
   content: '';
   position: absolute;
-  bottom: -12px;
+  bottom: -14px;
   left: 0;
   width: 50px;
   height: 3px;
@@ -247,16 +251,24 @@ section h2::after {
 section h3 {
   font-size: 1.3rem;
   color: var(--text-primary);
-  margin-top: 1.5rem;
-  margin-bottom: 0.8rem;
+  margin-top: 1.8rem;
+  margin-bottom: 1rem;
   font-weight: 600;
+}
+
+.lead {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 2.5rem;
+  max-width: 760px;
 }
 
 /* Grid */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
+  gap: 2.5rem;
   margin: 2rem 0;
 }
 
@@ -271,12 +283,27 @@ section h3 {
 /* Cards */
 .card {
   background: var(--bg-secondary);
-  border-radius: 8px;
-  padding: 2rem;
+  border-radius: 10px;
+  padding: 2.25rem;
   box-shadow: 0 1px 4px var(--shadow);
   transition: all 0.3s;
   border: 1px solid var(--border);
   position: relative;
+}
+
+.card > *:last-child {
+  margin-bottom: 0;
+}
+
+.card ul, .card ol {
+  margin: 0.8rem 0 1.2rem;
+  padding-left: 1.4rem;
+  color: var(--text-secondary);
+}
+
+.card ul li, .card ol li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
 }
 
 .card:hover {
@@ -640,6 +667,192 @@ footer {
   font-size: 0.9rem;
 }
 
+/* Key Facts Box - important info at top of page */
+.key-facts {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--mason-green);
+  border-radius: 10px;
+  padding: 2rem 2.25rem;
+  margin: 0 0 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.75rem;
+}
+
+.key-facts .fact-label {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--mason-green);
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.key-facts .fact-value {
+  color: var(--text-primary);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.key-facts .fact-value a {
+  color: var(--mason-green);
+  font-weight: 600;
+}
+
+/* Primary action row - top-of-page CTAs */
+.action-row {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 3rem;
+}
+
+/* Step List */
+.step-list {
+  counter-reset: step;
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+}
+
+.step-list li {
+  counter-increment: step;
+  position: relative;
+  padding: 1.25rem 1.5rem 1.25rem 3.5rem;
+  margin-bottom: 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+.step-list li::before {
+  content: counter(step);
+  position: absolute;
+  left: 1.25rem;
+  top: 1.25rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: var(--mason-green);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.step-list li strong {
+  color: var(--text-primary);
+}
+
+/* Tool Tier Grid */
+.tier-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.tier-card {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.5rem;
+}
+
+.tier-card h4 {
+  color: var(--mason-green);
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+  font-weight: 700;
+}
+
+.tier-card ul {
+  padding-left: 1.2rem;
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+}
+
+.tier-card ul li {
+  margin-bottom: 0.4rem;
+}
+
+/* Schedule Table */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0 2rem;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+.schedule-table th {
+  background: var(--mason-green);
+  color: white;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.schedule-table tr:last-child td {
+  border-bottom: none;
+}
+
+.schedule-table tr:hover td {
+  background: var(--bg-tertiary);
+}
+
+/* FAQ Item */
+.faq-item {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.faq-item .faq-q {
+  color: var(--text-primary);
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  font-size: 1.02rem;
+}
+
+.faq-item .faq-a {
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* Tag list for tool/material chips */
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1rem 0 0.5rem;
+}
+
+/* Section spacing helper */
+section + .divider,
+.divider {
+  margin: 3.5rem 0;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .header-container {
@@ -717,6 +930,25 @@ footer {
 
   .hours-list {
     grid-template-columns: 1fr;
+  }
+
+  .key-facts {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    gap: 1.25rem;
+  }
+
+  .schedule-table {
+    font-size: 0.85rem;
+  }
+
+  .schedule-table th,
+  .schedule-table td {
+    padding: 0.75rem 0.85rem;
+  }
+
+  .step-list li {
+    padding: 1.1rem 1.1rem 1.1rem 3rem;
   }
 }
 

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logging into the Macs - Dream Center</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%2300703C' rx='12'/><path d='M30 50 L50 30 L70 50 L50 70 Z' fill='%23fff' opacity='0.85'/></svg>">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <div class="logo-icon">D</div>
+        <span>Dream Center</span>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+      <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="visit.html">Visit</a>
+        <a href="services.html">Services</a>
+        <a href="ideas.html">Ideas</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Logging In and Out of a Mac</h1>
+    <p>Tips & Tricks: quick reference for the Dream Center Macs</p>
+  </section>
+
+  <div class="container">
+    <section style="padding-top: 3.5rem; padding-bottom: 0;">
+      <div class="key-facts">
+        <div>
+          <div class="fact-label">Username Format</div>
+          <div class="fact-value">School email</div>
+        </div>
+        <div>
+          <div class="fact-label">Password Format</div>
+          <div class="fact-value">Mason+StudentID#</div>
+        </div>
+        <div>
+          <div class="fact-label">Save Your Work</div>
+          <div class="fact-value">Always back up to Google Drive</div>
+        </div>
+        <div>
+          <div class="fact-label">iCloud</div>
+          <div class="fact-value">Optional for school use</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section style="padding-top: 0;">
+      <h2>Login Process</h2>
+      <ol class="step-list">
+        <li>Enter your school email and password (formatted as "Mason+StudentID#")</li>
+        <li>Press Return or click the arrow to log in</li>
+      </ol>
+    </section>
+
+    <div class="divider"></div>
+
+    <section style="padding-top: 0;">
+      <h2>Post-Login Interface</h2>
+      <p class="lead">Once logged in, you'll see three key elements:</p>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+        <div class="card">
+          <h3 style="font-size: 1.05rem;">Menu Bar</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">At the top, with system controls.</p>
+        </div>
+        <div class="card">
+          <h3 style="font-size: 1.05rem;">The Dock</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">At the bottom, showing frequently used apps.</p>
+        </div>
+        <div class="card">
+          <h3 style="font-size: 1.05rem;">Launchpad</h3>
+          <p style="color: var(--text-secondary); font-size: 0.9rem;">For accessing additional apps.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section style="padding-top: 0;">
+      <h2>iCloud (Optional)</h2>
+      <p class="lead">iCloud setup is available through Apple Menu → System Settings → Apple ID, but this step remains optional for school use.</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section style="padding-top: 0;">
+      <h2>Logout Procedure</h2>
+      <ol class="step-list">
+        <li>Click the Apple Menu in the top left corner</li>
+        <li>Select the logout option for your account</li>
+        <li>Confirm if prompted</li>
+      </ol>
+    </section>
+
+    <div class="divider"></div>
+
+    <section style="padding-top: 0;">
+      <div class="info-box">Always save your work to Google Drive so it's backed up and available on any device. Files saved only on the Mac may be lost when you log out.</div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section style="text-align: center; padding-top: 0;">
+      <h2>Ready to Get Creative?</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Check out <a href="tutorial-mac-fun.html" style="color: var(--mason-green); font-weight: 600;">Fun Things to Try on a Mac</a> for app ideas.</p>
+      <a href="visit.html" class="cta-button">Book a Visit</a>
+      <a href="ideas.html" class="cta-button secondary">Back to Ideas & How-To</a>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="visit.html">How to Visit</a>
+        <a href="services.html">Services</a>
+        <a href="ideas.html">Ideas</a>
+      </div>
+      <div class="footer-section">
+        <h4>Tips & Tricks</h4>
+        <a href="tutorial-green-screen.html">Green Screen with iMovie</a>
+        <a href="tutorial-advanced-podcasting.html">Next Level Podcasting</a>
+        <a href="tutorial-mac-fun.html">Fun Things on a Mac</a>
+        <a href="tutorial-photography.html">Advanced Photography</a>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Mason High School<br>7375 Kingsbury Dr<br>Mason, OH 45040</p>
+        <p><a href="mailto:dreamcenter@masonohioschools.com" style="color: white;">dreamcenter@masonohioschools.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 MHS Dream Center. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+    mobileMenuBtn.addEventListener('click', () => navMenu.classList.toggle('active'));
+    navMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navMenu.classList.remove('active')));
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('nav') && !e.target.closest('.mobile-menu-btn')) navMenu.classList.remove('active');
+    });
+  </script>
+</body>
+</html>

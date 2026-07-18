@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Screening with iMovie - Dream Center</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%2300703C' rx='12'/><path d='M30 50 L50 30 L70 50 L50 70 Z' fill='%23fff' opacity='0.85'/></svg>">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <div class="logo-icon">D</div>
+        <span>Dream Center</span>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+      <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="visit.html">Visit</a>
+        <a href="services.html">Services</a>
+        <a href="ideas.html">Ideas</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Green Screening with iMovie</h1>
+    <p>Tips & Tricks: replace your background, keep your subject</p>
+  </section>
+
+  <div class="container">
+    <section style="padding-top: 3.5rem; padding-bottom: 0;">
+      <div class="key-facts">
+        <div>
+          <div class="fact-label">Room</div>
+          <div class="fact-value">Dream Center Green Screen Room</div>
+        </div>
+        <div>
+          <div class="fact-label">Equipment</div>
+          <div class="fact-value">Tripods with phone cages, lighting rigs, lapel mics</div>
+        </div>
+        <div>
+          <div class="fact-label">Editing Software</div>
+          <div class="fact-value">iMovie (on the iMacs)</div>
+        </div>
+        <div>
+          <div class="fact-label">File Transfer</div>
+          <div class="fact-value">AirDrop (iPhone) or Google Drive</div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section style="padding-top: 0;">
+      <h2>Overview</h2>
+      <p class="lead">Record video in our Green Screen Room using your personal phone or one of our cameras, then replace the green background with your own photos, Google Slides, or video clips!</p>
+    </section>
+
+    <div class="divider"></div>
+
+    <section style="padding-top: 0;">
+      <h2>First Steps</h2>
+      <p class="lead">Start by recording some video! The room contains tripods with phone cages, lighting rigs, and lapel microphones.</p>
+
+      <h3>Helpful Resources</h3>
+      <div class="tag-list">
+        <span class="badge">Beginners Guide to Studio Lights (YouTube)</span>
+        <span class="badge">Beginners Guide to Bluetooth Lapel Mics (YouTube)</span>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section style="padding-top: 0;">
+      <h2>Transfer Your Footage</h2>
+      <div class="grid" style="grid-template-columns: 1fr 1fr;">
+        <div class="card">
+          <h3 style="font-size: 1.05rem;">From an iPhone</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">Use AirDrop to send your video directly to the iMac.</p>
+        </div>
+        <div class="card">
+          <h3 style="font-size: 1.05rem;">From Any Device</h3>
+          <p style="color: var(--text-secondary); font-size: 0.95rem;">Save your file to Google Drive and open it on the iMac.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section style="padding-top: 0;">
+      <h2>Replace the Background in iMovie</h2>
+      <div class="info-box">Dream Center staff are available to walk you through replacing the green background in iMovie step by step — just ask when you're ready to edit.</div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section style="text-align: center; padding-top: 0;">
+      <h2>Ready to Shoot?</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Reserve time in the Green Screen Room during open hours.</p>
+      <a href="visit.html" class="cta-button">Book a Visit</a>
+      <a href="ideas.html" class="cta-button secondary">Back to Ideas & How-To</a>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="visit.html">How to Visit</a>
+        <a href="services.html">Services</a>
+        <a href="ideas.html">Ideas</a>
+      </div>
+      <div class="footer-section">
+        <h4>Tips & Tricks</h4>
+        <a href="tutorial-advanced-podcasting.html">Next Level Podcasting</a>
+        <a href="tutorial-mac-login.html">Logging into the Macs</a>
+        <a href="tutorial-mac-fun.html">Fun Things on a Mac</a>
+        <a href="tutorial-photography.html">Advanced Photography</a>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Mason High School<br>7375 Kingsbury Dr<br>Mason, OH 45040</p>
+        <p><a href="mailto:dreamcenter@masonohioschools.com" style="color: white;">dreamcenter@masonohioschools.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 MHS Dream Center. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+    mobileMenuBtn.addEventListener('click', () => navMenu.classList.toggle('active'));
+    navMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navMenu.classList.remove('active')));
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('nav') && !e.target.closest('.mobile-menu-btn')) navMenu.classList.remove('active');
+    });
+  </script>
+</body>
+</html>

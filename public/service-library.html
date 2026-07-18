@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resource Library - Dream Center</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%2300703C' rx='12'/><path d='M30 50 L50 30 L70 50 L50 70 Z' fill='%23fff' opacity='0.85'/></svg>">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <div class="logo-icon">D</div>
+        <span>Dream Center</span>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+      <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="visit.html">Visit</a>
+        <a href="services.html">Services</a>
+        <a href="ideas.html">Ideas</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Resource Library</h1>
+    <p>Your hub for materials, tools, and creative inspiration</p>
+  </section>
+
+  <div class="container">
+    <section>
+      <h2>What's Available</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Physical Materials</h3>
+          <p style="color: var(--text-secondary);">Fabric, wood, acrylic, leather, and more. Browse our collection during open hours.</p>
+        </div>
+        <div class="card">
+          <h3>Tools & Equipment</h3>
+          <p style="color: var(--text-secondary);">Shared tools and equipment for your projects. Ask staff about checkout procedures.</p>
+        </div>
+        <div class="card">
+          <h3>Reference Materials</h3>
+          <p style="color: var(--text-secondary);">Guides, handbooks, and instruction manuals for makers and creators.</p>
+        </div>
+        <div class="card">
+          <h3>Digital Resources</h3>
+          <p style="color: var(--text-secondary);">Design templates, software access, and online learning materials.</p>
+        </div>
+        <div class="card">
+          <h3>Inspiration Gallery</h3>
+          <p style="color: var(--text-secondary);">Past student projects, design ideas, and creative examples.</p>
+        </div>
+        <div class="card">
+          <h3>Maker Kits</h3>
+          <p style="color: var(--text-secondary);">Pre-assembled kits and project sets ready to use.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>How to Access</h2>
+      <div class="grid" style="grid-template-columns: 1fr 1fr;">
+        <div class="card">
+          <h3>Browse In Person</h3>
+          <p style="color: var(--text-secondary);">Visit the Dream Center during open hours to explore our full collection and get personalized recommendations.</p>
+        </div>
+        <div class="card">
+          <h3>Checkout Items</h3>
+          <p style="color: var(--text-secondary);">Many items can be checked out for use on your projects. Ask staff about lending policies.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>Downloads & Resources</h2>
+      <div class="card">
+        <h3 style="margin-top: 0; color: var(--mason-green);">Available Online</h3>
+        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">These resources are available both in-person and online:</p>
+        <ul style="color: var(--text-secondary); columns: 2; column-gap: 2rem;">
+          <li>PDF step-by-step guides</li>
+          <li>Design templates & files</li>
+          <li>Inspiration galleries</li>
+          <li>Video walkthroughs</li>
+          <li>Equipment manuals</li>
+          <li>Material guides</li>
+          <li>Project checklists</li>
+          <li>Troubleshooting flowcharts</li>
+          <li>Design software tutorials</li>
+          <li>Community project showcase</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section style="text-align: center;">
+      <h2>Explore Our Collection</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Visit the Dream Center to discover materials and resources for your projects!</p>
+      <a href="visit.html" class="cta-button">Book a Visit</a>
+      <a href="services.html" class="cta-button secondary">Back to Services</a>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="visit.html">How to Visit</a>
+        <a href="services.html">Services</a>
+        <a href="ideas.html">Ideas</a>
+      </div>
+      <div class="footer-section">
+        <h4>Other Services</h4>
+        <a href="service-printing.html">3D & Printing</a>
+        <a href="service-vinyl-laser.html">Vinyl & Laser</a>
+        <a href="service-chromebook.html">Chromebook Help</a>
+        <a href="service-tutoring.html">Peer Tutoring</a>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Mason High School<br>7375 Kingsbury Dr<br>Mason, OH 45040</p>
+        <p><a href="mailto:dreamcenter@masonohioschools.com" style="color: white;">dreamcenter@masonohioschools.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 MHS Dream Center. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+    mobileMenuBtn.addEventListener('click', () => navMenu.classList.toggle('active'));
+    navMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navMenu.classList.remove('active')));
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('nav') && !e.target.closest('.mobile-menu-btn')) navMenu.classList.remove('active');
+    });
+  </script>
+</body>
+</html>

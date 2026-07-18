@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cosmic Cafe - Dream Center</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%2300703C' rx='12'/><path d='M30 50 L50 30 L70 50 L50 70 Z' fill='%23fff' opacity='0.85'/></svg>">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <div class="logo-icon">D</div>
+        <span>Dream Center</span>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+      <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="visit.html">Visit</a>
+        <a href="services.html">Services</a>
+        <a href="ideas.html">Ideas</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Cosmic Cafe</h1>
+    <p>Fuel your creativity with quality refreshments</p>
+  </section>
+
+  <div class="container">
+    <section>
+      <h2>What's On The Menu</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Hot Beverages</h3>
+          <p style="color: var(--text-secondary);">Premium coffee, espresso drinks, hot chocolate, tea, and more. Perfect for creative sessions.</p>
+        </div>
+        <div class="card">
+          <h3>Cold Drinks</h3>
+          <p style="color: var(--text-secondary);">Iced coffee, smoothies, sodas, and refreshing beverages for any time of day.</p>
+        </div>
+        <div class="card">
+          <h3>Snacks</h3>
+          <p style="color: var(--text-secondary);">Fresh pastries, cookies, granola bars, fruit, and other quick bites.</p>
+        </div>
+        <div class="card">
+          <h3>Full Meals</h3>
+          <p style="color: var(--text-secondary);">Sandwiches, wraps, salads, and hot meals available during lunch hours.</p>
+        </div>
+        <div class="card">
+          <h3>Seasonal Specials</h3>
+          <p style="color: var(--text-secondary);">Special items rotate seasonally. Check in for new treats and limited offerings.</p>
+        </div>
+        <div class="card">
+          <h3>Dietary Options</h3>
+          <p style="color: var(--text-secondary);">Vegetarian, vegan, and gluten-free options available.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>Hours & Location</h2>
+      <div class="card" style="background: var(--mason-green); color: white;">
+        <h3 style="color: white; margin-top: 0;">Open Every School Bell</h3>
+        <p>Available during all regular school hours for quick coffee runs or meal breaks.</p>
+        <p style="margin-top: 1.5rem;"><strong>Located in the Dream Center</strong></p>
+        <p style="opacity: 0.9;">Stop by between classes or during study hall for a quick pick-me-up!</p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>Why Visit the Cosmic Cafe</h2>
+      <div class="grid" style="grid-template-columns: 1fr 1fr;">
+        <div class="card">
+          <h3>Creative Fuel</h3>
+          <p style="color: var(--text-secondary);">A quality coffee or snack is the perfect companion to your maker projects. Stay energized while you create!</p>
+        </div>
+        <div class="card">
+          <h3>Community Connection</h3>
+          <p style="color: var(--text-secondary);">Meet other creators and collaborators. Many great projects have started over coffee in the Cafe!</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section style="text-align: center;">
+      <h2>Come By & Grab a Coffee</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">The Cosmic Cafe is waiting for you with your favorite drinks and snacks!</p>
+      <a href="visit.html" class="cta-button">Plan Your Visit</a>
+      <a href="services.html" class="cta-button secondary">Back to Services</a>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="visit.html">How to Visit</a>
+        <a href="services.html">Services</a>
+        <a href="ideas.html">Ideas</a>
+      </div>
+      <div class="footer-section">
+        <h4>Other Services</h4>
+        <a href="service-printing.html">3D & Printing</a>
+        <a href="service-vinyl-laser.html">Vinyl & Laser</a>
+        <a href="service-library.html">Library</a>
+        <a href="service-tutoring.html">Peer Tutoring</a>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Mason High School<br>7375 Kingsbury Dr<br>Mason, OH 45040</p>
+        <p><a href="mailto:dreamcenter@masonohioschools.com" style="color: white;">dreamcenter@masonohioschools.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 MHS Dream Center. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+    mobileMenuBtn.addEventListener('click', () => navMenu.classList.toggle('active'));
+    navMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navMenu.classList.remove('active')));
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('nav') && !e.target.closest('.mobile-menu-btn')) navMenu.classList.remove('active');
+    });
+  </script>
+</body>
+</html>

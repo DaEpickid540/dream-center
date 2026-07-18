@@ -464,11 +464,74 @@ section h3 {
 }
 
 .info-box.warning {
-  background: #d97706;
+  background: var(--mason-green);
+  opacity: 0.95;
 }
 
 .info-box.success {
-  background: #10b981;
+  background: var(--mason-green);
+}
+
+/* Accordion */
+.accordion {
+  margin: 1rem 0;
+}
+
+.accordion-item {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+.accordion-header {
+  background: var(--bg-secondary);
+  border: none;
+  width: 100%;
+  padding: 1.5rem;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s;
+}
+
+.accordion-header:hover {
+  background: var(--bg-tertiary);
+}
+
+.accordion-header.active {
+  background: var(--mason-green);
+  color: white;
+}
+
+.accordion-icon {
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+  display: inline-block;
+}
+
+.accordion-header.active .accordion-icon {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  padding: 0;
+  background: var(--bg-primary);
+}
+
+.accordion-content.active {
+  max-height: 1000px;
+  padding: 1.5rem;
+  border-top: 1px solid var(--border);
 }
 
 /* Footer */

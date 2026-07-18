@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D & Poster Printing - Dream Center</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%2300703C' rx='12'/><path d='M30 50 L50 30 L70 50 L50 70 Z' fill='%23fff' opacity='0.85'/></svg>">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <div class="logo-icon">D</div>
+        <span>Dream Center</span>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+      <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="visit.html">Visit</a>
+        <a href="services.html">Services</a>
+        <a href="ideas.html">Ideas</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Express 3D & Poster Printing</h1>
+    <p>Transform your designs into reality with professional printing services</p>
+  </section>
+
+  <div class="container">
+    <section>
+      <h2>What We Offer</h2>
+      <div class="grid" style="grid-template-columns: 1fr 1fr;">
+        <div class="card">
+          <h3>3D Printing</h3>
+          <p style="color: var(--text-secondary);">Bring your CAD designs to life with professional 3D printing. Perfect for prototypes, art projects, and engineering models.</p>
+          <h5 style="color: var(--mason-green);">Capabilities:</h5>
+          <ul style="color: var(--text-secondary);">
+            <li>Multiple material options</li>
+            <li>Various sizes and complexities</li>
+            <li>Post-processing available</li>
+            <li>Design consultation</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>Poster Printing</h3>
+          <p style="color: var(--text-secondary);">High-quality color printing for presentations, announcements, and displays. Professional results every time.</p>
+          <h5 style="color: var(--mason-green);">Available Options:</h5>
+          <ul style="color: var(--text-secondary);">
+            <li>Multiple sizes (8x10 to 24x36)</li>
+            <li>Matte or glossy finishes</li>
+            <li>Rush orders available</li>
+            <li>Design help available</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>How to Order</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Step 1: Prepare Your Files</h3>
+          <p style="color: var(--text-secondary);">Bring your design files in digital format (STL, PDF, JPG, PNG, etc.). Our staff can help optimize files if needed.</p>
+        </div>
+        <div class="card">
+          <h3>Step 2: Discuss Options</h3>
+          <p style="color: var(--text-secondary);">Talk with our team about materials, sizes, finishes, and timelines. We'll help you choose the best options.</p>
+        </div>
+        <div class="card">
+          <h3>Step 3: Approve & Pay</h3>
+          <p style="color: var(--text-secondary);">Review estimates and provide payment (if applicable). Most services are free for school projects.</p>
+        </div>
+        <div class="card">
+          <h3>Step 4: Pickup</h3>
+          <p style="color: var(--text-secondary);">Your finished prints will be ready! Pickup during open hours at the Dream Center.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>Pricing & Timing</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Most services are included in your school experience. Check with staff for any material costs.</p>
+      <div class="card" style="background: var(--mason-green); color: white;">
+        <h3 style="color: white; margin-top: 0;">Standard Timeline:</h3>
+        <p><strong>Posters:</strong> 1-2 school days</p>
+        <p><strong>3D Prints:</strong> 2-5 school days (depending on complexity)</p>
+        <p><strong>Express Service:</strong> Available for rush projects</p>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section style="text-align: center;">
+      <h2>Ready to Print?</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Visit the Dream Center with your designs to get started!</p>
+      <a href="visit.html" class="cta-button">Book a Visit</a>
+      <a href="services.html" class="cta-button secondary">Back to Services</a>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="visit.html">How to Visit</a>
+        <a href="services.html">Services</a>
+        <a href="ideas.html">Ideas</a>
+      </div>
+      <div class="footer-section">
+        <h4>Other Services</h4>
+        <a href="service-vinyl-laser.html">Vinyl & Laser</a>
+        <a href="service-library.html">Library</a>
+        <a href="service-chromebook.html">Chromebook Help</a>
+        <a href="service-tutoring.html">Peer Tutoring</a>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Mason High School<br>7375 Kingsbury Dr<br>Mason, OH 45040</p>
+        <p><a href="mailto:dreamcenter@masonohioschools.com" style="color: white;">dreamcenter@masonohioschools.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 MHS Dream Center. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+    mobileMenuBtn.addEventListener('click', () => navMenu.classList.toggle('active'));
+    navMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navMenu.classList.remove('active')));
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('nav') && !e.target.closest('.mobile-menu-btn')) navMenu.classList.remove('active');
+    });
+  </script>
+</body>
+</html>

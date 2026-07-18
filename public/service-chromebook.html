@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chromebook Help - Dream Center</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%2300703C' rx='12'/><path d='M30 50 L50 30 L70 50 L50 70 Z' fill='%23fff' opacity='0.85'/></svg>">
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <div class="logo-icon">D</div>
+        <span>Dream Center</span>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+      <nav id="navMenu">
+        <a href="index.html">Home</a>
+        <a href="visit.html">Visit</a>
+        <a href="services.html">Services</a>
+        <a href="ideas.html">Ideas</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Chromebook Help & Support</h1>
+    <p>Get your technical issues resolved fast</p>
+  </section>
+
+  <div class="container">
+    <section>
+      <h2>Common Issues We Solve</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Login Problems</h3>
+          <p style="color: var(--text-secondary);">Can't sign in? Forgot password? We can help reset and troubleshoot account issues.</p>
+        </div>
+        <div class="card">
+          <h3>WiFi & Connectivity</h3>
+          <p style="color: var(--text-secondary);">Device won't connect to WiFi? We'll diagnose and fix connectivity problems.</p>
+        </div>
+        <div class="card">
+          <h3>App Issues</h3>
+          <p style="color: var(--text-secondary);">Apps crashing? Need to install software? We'll help with installations and troubleshooting.</p>
+        </div>
+        <div class="card">
+          <h3>Classroom Access</h3>
+          <p style="color: var(--text-secondary);">Problems with Google Classroom or other learning apps? We can get you back on track.</p>
+        </div>
+        <div class="card">
+          <h3>File Problems</h3>
+          <p style="color: var(--text-secondary);">Can't find files? Issues with cloud sync? We'll help organize your digital life.</p>
+        </div>
+        <div class="card">
+          <h3>Performance</h3>
+          <p style="color: var(--text-secondary);">Device running slow? We can optimize settings and clear unnecessary files.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>Quick Troubleshooting Tips</h2>
+      <div class="card">
+        <h3 style="color: var(--mason-green); margin-top: 0;">Try These First:</h3>
+        <ul style="color: var(--text-secondary);">
+          <li><strong>Restart:</strong> Power off and back on (fixes most issues!)</li>
+          <li><strong>Clear Cache:</strong> Remove temporary files and data</li>
+          <li><strong>Check WiFi:</strong> Make sure you're connected to the right network</li>
+          <li><strong>Update:</strong> Check for and install system updates</li>
+          <li><strong>Sign Out & In:</strong> Log out then log back in to refresh your session</li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section>
+      <h2>Get Help From Us</h2>
+      <div class="grid" style="grid-template-columns: 1fr 1fr;">
+        <div class="card">
+          <h3>During Open Hours</h3>
+          <p style="color: var(--text-secondary);">Stop by the Dream Center with your Chromebook. We'll diagnose and fix issues on the spot.</p>
+        </div>
+        <div class="card">
+          <h3>What to Bring</h3>
+          <p style="color: var(--text-secondary);">Bring your Chromebook and any relevant passwords or information about the problem.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section style="text-align: center;">
+      <h2>Need Technical Support?</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">Our team is ready to help solve your Chromebook issues!</p>
+      <a href="visit.html" class="cta-button">Book a Visit</a>
+      <a href="services.html" class="cta-button secondary">Back to Services</a>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Explore</h4>
+        <a href="index.html">Home</a>
+        <a href="visit.html">How to Visit</a>
+        <a href="services.html">Services</a>
+        <a href="ideas.html">Ideas</a>
+      </div>
+      <div class="footer-section">
+        <h4>Other Services</h4>
+        <a href="service-printing.html">3D & Printing</a>
+        <a href="service-vinyl-laser.html">Vinyl & Laser</a>
+        <a href="service-library.html">Library</a>
+        <a href="service-tutoring.html">Peer Tutoring</a>
+      </div>
+      <div class="footer-section">
+        <h4>Contact</h4>
+        <p>Mason High School<br>7375 Kingsbury Dr<br>Mason, OH 45040</p>
+        <p><a href="mailto:dreamcenter@masonohioschools.com" style="color: white;">dreamcenter@masonohioschools.com</a></p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 MHS Dream Center. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const navMenu = document.getElementById('navMenu');
+    mobileMenuBtn.addEventListener('click', () => navMenu.classList.toggle('active'));
+    navMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navMenu.classList.remove('active')));
+    document.addEventListener('click', (e) => {
+      if (!e.target.closest('nav') && !e.target.closest('.mobile-menu-btn')) navMenu.classList.remove('active');
+    });
+  </script>
+</body>
+</html>

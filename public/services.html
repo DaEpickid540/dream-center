@@ -293,42 +293,6 @@
     </div>
   </footer>
 
-  <script>
-    function toggleAccordion(button) {
-      const content = button.nextElementSibling;
-      const isActive = content.classList.contains('active');
-
-      // Close all other accordions
-      document.querySelectorAll('.accordion-content.active').forEach(item => {
-        if (item !== content) {
-          item.classList.remove('active');
-          item.previousElementSibling.classList.remove('active');
-        }
-      });
-
-      // Toggle current accordion
-      button.classList.toggle('active');
-      content.classList.toggle('active');
-    }
-
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const navMenu = document.getElementById('navMenu');
-
-    mobileMenuBtn.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
-    });
-
-    navMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-      });
-    });
-
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('nav') && !e.target.closest('.mobile-menu-btn')) {
-        navMenu.classList.remove('active');
-      }
-    });
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>

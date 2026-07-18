@@ -165,14 +165,6 @@
     </div>
   </footer>
 
-  <script>
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const navMenu = document.getElementById('navMenu');
-    mobileMenuBtn.addEventListener('click', () => navMenu.classList.toggle('active'));
-    navMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => navMenu.classList.remove('active')));
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('nav') && !e.target.closest('.mobile-menu-btn')) navMenu.classList.remove('active');
-    });
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>

@@ -5,8 +5,8 @@
   "targets": {
     "school-suite-652d8": {
       "hosting": {
-        "main": [
-          "school-suite-652d8"
+        "mhsdc": [
+          "mhsdc"
         ]
       }
     }

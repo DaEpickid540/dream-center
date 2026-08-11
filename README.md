@@ -1,6 +1,7 @@
 # MHS Dream Center - Static Firebase Website
 
 A beautiful, static Firebase-hosted website for the Mason High School Dream Center. Built with a Mason green color theme and fully responsive design.
+Claude was used to scrape the original site and rewrite things to sound more fluid.
 
 ## 📋 Features
 

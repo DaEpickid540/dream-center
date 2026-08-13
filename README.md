@@ -166,18 +166,3 @@ To update content:
 1. Edit the relevant HTML file in `public/`
 2. Test locally: `firebase serve`
 3. Deploy: `firebase deploy`
-
-Changes are live within seconds.
-
-## 📞 Contact
-
-Dream Center Email: dreamcenter@masonohioschools.com
-School Address: 7375 Kingsbury Dr, Mason, OH 45040
-
-## 📄 License
-
-MIT License - Feel free to customize and adapt for your needs
-
----
-
-**Built with creativity, collaboration, and innovation in mind.**
